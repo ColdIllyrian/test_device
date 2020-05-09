@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020 The Evolution X Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,11 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from curtana device
 $(call inherit-product, device/redmi/curtana/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Evolution X stuff.
+CUSTOM_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_curtana
+PRODUCT_NAME := aosp_curtana
 PRODUCT_DEVICE := curtana
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
