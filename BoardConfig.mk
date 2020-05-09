@@ -5,7 +5,7 @@
 #
 
 BUILD_BROKEN_DUP_RULES := true
-
+BOARD_VENDOR := redmi
 DEVICE_PATH := device/redmi/curtana
 
 # Architecture
@@ -196,8 +196,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
 
-# Treble
-BOARD_VNDK_VERSION := current
+
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
